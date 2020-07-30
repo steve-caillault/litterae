@@ -1,0 +1,88 @@
+/**
+ * Formulaire de recherche de livres ou d'auteur
+ */
+ 
+div.search {
+	max-width: $width-desktop - 2 * $site-padding-desktop;
+	margin: 0 auto 1.5rem;
+ 	
+	form#search-form {
+	 	margin: 0 auto;
+	 	position: relative;
+	 	
+	 	fieldset {
+	 		position: relative;	
+	 	}
+	 	
+	 	div.form-input {
+	 		width: 100%;
+	 		position: relative;
+	 		
+	 		&:not(.form-input-submit) {
+	 			margin: 0;	
+	 		}
+	 		
+	 		label {
+	 			padding: 0;
+				position: absolute;
+				left: 0.6rem;
+				top: 50%;
+				transform: translateY(-50%);
+				width: auto;
+				opacity: 1;
+				visibility: visible;
+				transition: color 0.5s, opacity 0.5s, visibility 0.5s;
+	 			&::after {
+	 				content: '';	
+	 			}
+	 		
+	 		}
+	 		
+	 		input[type="text"] {
+	 			width: 100%;	
+	 			border-radius: 6px;
+	 			margin-right: 0;
+	 			
+	 			@include desktop {
+	 				&:focus {
+	 					box-shadow: 0 0 0 6px lighten(#333, 40%);
+	 				}	
+	 			}
+	 			
+	 			&:hover + label {
+	 				color: lighten(#333, 10%);
+	 			}
+	 		}
+	 	
+	 		@include desktop {
+	 			input {
+	 				font-size: 3rem;
+	 				padding: 1rem;
+	 			}
+	 			label {
+	 				left: 1.1rem;
+	 				font-size: 3rem;
+	 					
+	 			}
+	 		}
+	 	
+	 		/* Cache le label qui est sur le champs */
+	 		/*input:focus + label {
+	 			opacity: 0;
+	 			visibility: hidden;
+	 		}*/
+	 	
+	 		&.form-input-submit {
+	 			position: absolute;	
+	 			width: auto;
+	 			top: 0;
+	 			right: 0;
+	 			input[type="submit"] {
+		 			border-radius: 0 6px 6px 0;
+	 			}
+	 		}
+	 		
+	 	}
+	 
+	}
+}

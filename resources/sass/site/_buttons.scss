@@ -1,0 +1,39 @@
+/* Bouton de suivi d'un contributeur ou d'ajout à une liste */	
+button.manage-list {
+	transition: color 0.25s, background 0.25s, border 0.25s;
+	background: #333;
+	color: #fff;
+	border: 1px solid #000;
+	padding: 0 1rem;
+	font-size: 1.4rem;
+	border-radius: 5px;
+	&:focus {
+		box-shadow: 0 0 0 3px lighten(#000, 40%);	
+	}
+	&::first-letter {
+		text-transform: uppercase;	
+	}
+	&:not(.loading) {
+		
+		&.selected:hover {
+			background: lighten(#333, 15%);
+			border-color: lighten(#000, 15%);
+		}
+		&:not(.selected) {
+			color: #333;
+			background: lighten(#333, 55%);
+			border-color: lighten(#000, 55%);
+			&:hover {
+				color: #fff;
+				background: lighten(#333, 20%);
+				border-color: lighten(#000, 20%);
+			}
+		}
+	}
+	&.loading {
+		opacity: 1;
+		color: lighten(#333, 50%);
+		background: lighten(#333, 80%);
+		border-color: lighten(#000, 80%);
+	}
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Gestionnaire_de_bibliotheque",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "update-static": "gulp update-styles && gulp update-scripts",
+    "watch": "gulp watch",
+    "production": "gulp update-static --env production"
+  },
+  "author": "Stève Caillault",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-concat": "^2.6.1",
+    "gulp-terser": "^1.2.0"
+  }
+}

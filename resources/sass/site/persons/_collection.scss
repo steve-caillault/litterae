@@ -1,0 +1,18 @@
+/**
+ * Résultats de la recherche de persons
+ */
+ 
+ div.search-results.persons {
+ 	ul.persons {
+ 		li.person {
+ 			a {
+ 				vertical-align: middle;	
+ 				margin-right: 1rem;
+ 				
+ 			}
+ 			button.manage-list {
+ 				vertical-align: middle;
+ 			}
+ 		}
+ 	}
+ }
