@@ -10,9 +10,11 @@ PHP 7.4 est requis pour faire fonctionner ce projet. Ce projet est compatible av
 
 Après avoir récupéré le projet, exécuter la commande suivante à la racine :
 
-`php cli environment demo`
+````bash
+php cli environment demo
+````
 
-Cela permet de déclarer l'environnement à éxécuter.
+Cela permet de déclarer l'environnement à exécuter.
 
 ## Initialisation des bases de données
 
@@ -23,19 +25,21 @@ Deux bases de données seront créées :
 
 ## Configuration
 
-Dans le fichier config/environments/demo/database.php, adaptez la connexion aux deux bases de données pour votre installation.
+Dans le fichier /config/environments/demo/database.php, adaptez la connexion aux deux bases de données pour votre installation.
 
 ## Création d'un compte utilisateur
 
 En ligne de commande, vous pouvez exécuter la commande du type :
 
-`php cli create-user firstName lastName password role`
+````bash
+php cli create-user firstName lastName password role
+````
 
-firstName et lastName seront utilisés pour déterminer l'identifiant de l'utilisateur. Par exemple, si le prénom de l'utilisateur est Fiodor et le nom Dostoïevski, le nom d'utilsateur sera fiodor-dostoievski. Pour le paramètre role, admin et reader sont autorisés. Un utilisateur qui a le rôle admin a automatiquement le rôle reader. 
+*firstName* et *lastName* seront utilisés pour déterminer l'identifiant de l'utilisateur. Par exemple, si le prénom de l'utilisateur est Fiodor et le nom Dostoïevski, le nom d'utilsateur sera fiodor-dostoievski. Pour le paramètre role, *admin* et *reader* sont autorisés. Un utilisateur qui a le rôle *admin* a automatiquement le rôle *reader*. 
 
 ## Panneau d'administration
 
-Le panneau d'administration est disponible à l'adresse /admin. L'accès est restreint aux utilisateurs ayant le rôle admin.
+Le panneau d'administration est disponible à l'adresse /admin. L'accès est restreint aux utilisateurs ayant le rôle *admin*.
 
 ### Ajouter un livre
 
